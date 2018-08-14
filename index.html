@@ -1,3 +1,17 @@
+
+<link rel="stylesheet" href="navbar.css">
+
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#writing">Writing</a>
+  <a href="#projects">Projects</a>
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,44 +19,37 @@
 div.gallery {
     border: 1px solid #ccc;
 }
-
 div.gallery:hover {
     border: 1px solid #777;
 }
-
 div.gallery img {
     width: 100%;
     height: auto;
 }
-
 div.desc {
     padding: 15px;
     text-align: center;
 }
-
 * {
     box-sizing: border-box;
 }
-
 .responsive {
     padding: 0 6px;
-    float: left;
+    float: center;
     width: 24.99999%;
 }
-
 @media only screen and (max-width: 700px) {
     .responsive {
         width: 49.99999%;
         margin: 6px 0;
     }
 }
-
 @media only screen and (max-width: 500px) {
     .responsive {
-        width: 100%;
+        width: 75%;
+        height: auto;
     }
 }
-
 .clearfix:after {
     content: "";
     display: table;
@@ -63,6 +70,13 @@ div.desc {
 <div class="gallery">
   <a target="_blank" href="DSC08401.jpg">
     <img src="DSC08401.jpg" alt="Forest" width="300" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="DSC08659.jpg">
+    <img src="DSC08659.jpg" alt="Forest" width="300" height="200">
   </a>
   <div class="desc">Add a description of the image here</div>
 </div>
