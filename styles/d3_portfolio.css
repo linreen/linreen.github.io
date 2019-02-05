@@ -1,0 +1,40 @@
+ @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
+  *{
+    margin:0;
+    padding:0;
+  }
+
+  html,
+  body{
+     height: 100%;
+     padding: 0;
+     scroll-behavior: smooth;
+     background: #FFFFFF;
+     color: #666;
+     font-family: 'Open Sans', sans-serif;
+     font-weight: 300;
+  }
+  h2{
+    line-height: 1.25;
+    padding-top: 45px;
+    font-weight: 300;
+  }
+  h1{
+    line-height: 1.25;
+    font-weight: 400;
+    padding-top: 45px;
+  }
+  a:hover {
+  color: grey;
+  text-shadow: lightgrey;
+  text-decoration: none;
+  }
+  svg{
+    padding: 20px;
+  }
+  text{
+    font-size: 10px;
+  }
+  strong{
+    font-weight: 600;
+  }

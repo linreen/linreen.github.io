@@ -18,6 +18,7 @@
   <div class="w3-bar w3-light-grey w3-round w3-display-bottommiddle w3-hide-small" style="bottom:-16px">
     <a href="#" class="w3-bar-item w3-button">gallery</a>
     <a href="views/about_me.html" class="w3-bar-item w3-button">about</a>
+    <a href="views/d3_portfolio.html" class="w3-bar-item w3-button">graphics portfolio</a>
   </div>
 </header>
   
@@ -57,7 +58,7 @@
   <div class="w3-display-container w3-center">
     <a href="albums/florida_album.html">
     <img src="gallery_images/IMG_5090.JPG" title="Shoreline" class="w3-image w3-hover-opacity " width="875" height="500">
-    <div class= "w3-display-middle w3-container w3-large w3-light-grey w3-text-grey">florida, 2016</div>
+    <div class= "w3-display-middle w3-container w3-large w3-light-grey w3-text-grey">florida, 2015</div>
     </a>
   </div>
 
@@ -71,9 +72,14 @@
     </div>
   </div>
 </div>
+<script>
+  window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+  };
+</script>
 
 <!-- Footer -->
-<footer class="w3-display-container w3-content w3-center">
+<footer class="w3-display-container w3-content w3-margin-bottom w3-center">
   <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
   <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Next »</button>
 </footer>

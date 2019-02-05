@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+ <!-- Load JS libraries -->
+ <script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+  <script> var d3v4 = d3;</script>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.js"></script>
+
+  <!-- Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<!-- W3 CSS -->
+<link rel="stylesheet" href="../w3.css">
+
+<!-- Styles -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="../styles/d3_portfolio.css">
+</head>
+
+<body>
+<!-- Header -->
+<header class="w3-display-container w3-content w3-center w3-animate-opacity" style="max-width:1500px">
+  <img class="w3-image" src="../images/darkgrey.png" alt="Me" width="1500" height="300">
+  <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
+    <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">L. REN</h1>
+    <h5 class="w3-hide-large" style="white-space:nowrap">L. REN</h5>
+  </div>
+  
+   <!-- Navbar (placed at the bottom of the header image) -->
+  <div class="w3-bar w3-light-grey w3-round w3-display-bottommiddle w3-hide-small" style="bottom:-16px">
+    <a href="../index.html" class="w3-bar-item w3-button">gallery</a>
+    <a href="views/about_me.html" class="w3-bar-item w3-button">about</a>
+    <a href="d3_portfolio.html" class="w3-bar-item w3-button">graphics portfolio</a>
+  </div>
+</header>
+  <div class="container">
+
+  <div class="row">
+    <div class="col-8 w3-animate-opacity">
+      <a href="auction.html"><h1 id="firstpost">auction theory visualization</h1></a>
+      <p> I was quite curious about how successful auctions came about, and so that's how this mini project started. A small stratified sample was used, accumulating to over 6000 bids. </p>
+    </div>
+
+
+
+
+
+<script>
+
+    //waypoints scroll constructor
+    function scroll(n, offset, func1, func2){
+      return new Waypoint({
+        element: document.getElementById(n),
+        handler: function(direction) {
+           direction == 'down' ? func1() : func2();
+        },
+        //start 75% from the top of the div
+        offset: offset
+      });
+    };
+
+    new scroll('#maximum','0%',update(),update());
+</script>
+
+
+</body>
+
+</html>
