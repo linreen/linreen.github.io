@@ -61,7 +61,6 @@
 <script src="../js/donuts.js"></script>
 
 <script>  
-
   function scroll(n, offset, func1, func2){
       return new Waypoint({
         element: document.getElementById(n),
@@ -73,12 +72,10 @@
         offset: offset
       });
     };
-
     //trigger these functions on page scroll
     new scroll('chart', '75%', createCalendar); //unidirectional triggers
     new scroll('moredonuts', '0%', createDonut);
     new scroll('nextdiv', '0%', createMoreDonuts);
-
     
  </script>
  <p class="w3-center"> original data may be found via <a href="https://www.kaggle.com/daveianhickey/2000-16-traffic-flow-england-scotland-wales"> kaggle</a> or via the <a href="https://data.gov.uk/">uk open data site</a>
