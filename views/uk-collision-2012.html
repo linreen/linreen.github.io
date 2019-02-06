@@ -53,7 +53,7 @@
 <p class="text-center">% of accidents in cities</p>
 <div id='moredonuts'></div>
 <p class="text-center">% of <font color=#90EE90> minor, <font color=#ffcc00> serious, <font color=#808080> and <font color=#ff6666> deadly <font color=#808080>accidents in cities.</p>
-<div id='nextdiv'><h2>blah</h2></div>
+<div id='nextdiv'><h2></h2></div>
 
 
 <script src="../js/calendar.js"></script>
@@ -74,7 +74,7 @@
     };
 
     //trigger these functions on page scroll
-    new scroll('chart', '75%', createCalendar);
+    new scroll('chart', '75%', createCalendar); //unidirectional triggers
     new scroll('moredonuts', '0%', createDonut);
     new scroll('nextdiv', '0%', createMoreDonuts);
 
