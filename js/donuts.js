@@ -54,7 +54,7 @@ var timeout = setTimeout(function () {
             return arc(i(t));
         };
     });
-}, 200);
+}, 1000);
 
 function calcPercent(percent) {
     return [percent, 100 - percent];
@@ -164,7 +164,7 @@ var timeout = setTimeout(function () {
             return arc(i(t));
         };
     });
-}, 200);
+}, 1000);
 
 var timeout2 = setTimeout(function () {
     clearTimeout(timeout2);
@@ -178,7 +178,7 @@ var timeout2 = setTimeout(function () {
             return arc(i(t));
         };
     });
-}, 200);
+}, 1000);
 
 var timeout3 = setTimeout(function () {
     clearTimeout(timeout3);
@@ -192,8 +192,8 @@ var timeout3 = setTimeout(function () {
             return arc(i(t));
         };
     });
-}, 200);
+}, 1000);
 function calcPercent(percent) {
     return [percent, 100 - percent];
-}
+};
 }

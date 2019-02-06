@@ -91,7 +91,7 @@
       rect
           .filter(function(d) { return d in data; })
           .transition()
-          .delay((d, i) => 5* i)
+          .delay((d, i) => 10* i)
           .duration(3000)
           .ease("linear")
           .attr("class", function(d) { return "day " + color(data[d]); })
