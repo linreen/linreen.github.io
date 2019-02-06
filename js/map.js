@@ -4,7 +4,7 @@ var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/mapbox/dark-v9',//stylesheet location
     center: [0.1278,51.5074], // starting position
-    zoom: 7 // starting zoom
+    zoom: 9 // starting zoom
 });
 
 $(document).ready(function() {
@@ -29,7 +29,7 @@ function makeGeoJSON(csvData) {
         "type": "circle",
         "source": {'type': 'geojson',
                     'data': data},
-        "maxzoom": 9,
+        "maxzoom": 10,
         'paint': {
 // make circles larger as the user zooms from z12 to z22
 'circle-radius': {

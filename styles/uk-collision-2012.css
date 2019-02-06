@@ -28,12 +28,17 @@
     font-weight: 400;
   }
   a:hover {
-  color: grey;
+  color: lightgrey;
   text-shadow: lightgrey;
   text-decoration: none;
   }
+  a{
+  color: #000080;
+  text-shadow: darkgrey;
+  text-decoration: none;
+  }
   svg{
-    padding: 20px;
+    padding-top: 20px;
   }
   text{
     font-size: 2em;
@@ -41,6 +46,17 @@
   }
   strong{
     font-weight: 600;
+  }
+  .container {
+    height: 100%;
+    max-width: 440px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    height: 100%;
+    line-height: 1.5;
+    left: 700px;
   }
 
       #chart{
@@ -98,11 +114,29 @@
         border: 2px solid #ccc;
         padding: 10px;
       }
-      path.color0 {
-     fill: #808080;
+    path.color0 {
+     fill: #B0E0E6;
     }
     path.color1 {
-    fill: #B0E0E6
+    fill: #808080;
+    }
+    path.color20 {
+     fill: #90EE90;
+    }
+    path.color21 {
+    fill: #808080;
+    }
+    path.color30 {
+     fill: #ffff99;
+    }
+    path.color31 {
+    fill: #808080;
+    }
+    path.color40 {
+     fill:  #ff6666;
+    }
+    path.color41 {
+    fill: #808080;
     }
     #moredonuts{
       display:inline;

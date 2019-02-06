@@ -45,12 +45,15 @@
   </div>
 </header>
 <h2>2012 Great Britain collision overview</h2>
+<div class='container'><h3>In total, there were an observed <strong>179,715</strong> collisions, <strong>241,954</strong> casualities, involving <strong>328,066</strong> vehicles.</h3></div>
 <div id='map'></div>
+
 <h2>number of collisions by day of the year</h2>
 <div id="chart" class="clearfix"> </div>
 <div id='donuts'><h2>cities vrs. towns & countryside</h2></div>
-
-
+<p class="text-center">% of accidents in cities</p>
+<div id='moredonuts'></div>
+<p class="text-center">% of <font color=#90EE90> minor, <font color=#ffcc00> serious, <font color=#808080> and <font color=#ff6666> deadly <font color=#808080>accidents in cities.</p>
 
 
 <script src="../js/map.js"></script>
@@ -73,13 +76,13 @@
 
     //triger these functions on page scroll
     new scroll('chart', '75%', createCalendar);
-    new scroll('donuts', '75%', createDonut, createCalendar);
-
-
+    new scroll('donuts', '75%', createDonut );
+    new scroll('moredonuts', '75%', createMoreDonuts );
 
     //start grid on page load
     createCalendar();
  </script>
+ <p class="w3-center"> original data may be found via <a href="https://www.kaggle.com/daveianhickey/2000-16-traffic-flow-england-scotland-wales"> kaggle</a> or via the <a href="https://data.gov.uk/">uk open data site</a>
 
 </body>
 </html>

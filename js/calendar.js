@@ -88,7 +88,12 @@
         .rollup(function(d) { return (d[0].Number_of_Casualties) / 179715; })
         .map(csv);
 
-      rect.filter(function(d) { return d in data; })
+      rect
+          .filter(function(d) { return d in data; })
+          .transition()
+          .delay((d, i) => 5* i)
+          .duration(3000)
+          .ease("linear")
           .attr("class", function(d) { return "day " + color(data[d]); })
         .select("title")
           .text(function(d) { return d + ": " + percent(data[d]); });
