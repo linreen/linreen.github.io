@@ -26,8 +26,8 @@
    <!-- Navbar (placed at the bottom of the header image) -->
   <div class="w3-bar w3-light-grey w3-round w3-display-bottommiddle w3-hide-small" style="bottom:-16px">
     <a href="../index.html" class="w3-bar-item w3-button">gallery</a>
-    <a href="views/about_me.html" class="w3-bar-item w3-button">about</a>
     <a href="d3_portfolio.html" class="w3-bar-item w3-button">graphics portfolio</a>
+    <a href="about_me.html" class="w3-bar-item w3-button">about</a>
   </div>
 </header>
 
@@ -46,7 +46,7 @@
       <h3>According to the sample:</h3>
 		  <h2>- The best Ebay sellers have sold an average of <strong id="strong3"></strong> items.</h2>
       <h2>- The best auction titles had an average of <strong id="strong4"></strong> words.</h2>
-     
+      <h2>- <strong id="strong5"></strong><strong>%</strong> of bids were made with the knowledge that returns are not allowed.</h2>
 		</div>
 	</div>
 	<div><svg class="container2" id="pattern"  width="100%" height="100%" ></svg></div>
@@ -102,6 +102,27 @@ function counter2(){
       })
     .duration(2000);
   }
+
+   function counter4(){
+    var strong5 = d3.select("#strong5");
+      
+    var text3 = strong5.append("strong")
+      .attr("x", 50)
+      .attr("y", 50)
+      .text(1);
+      
+    text3.transition()
+      .tween("text", function starttrans() {
+         var selection = d3.select(this);    // selection of node being transitioned
+         var start = d3.select(this).text(); // start value prior to transition
+         var end = 75;                     // specified end value
+         var interpolator = d3.interpolateNumber(start,end); // d3 interpolator
+
+         return function starttrans(t) { selection.text(Math.round(interpolator(t))); };  // return value
+         
+      })
+    .duration(2000);
+  }
 </script>
 <script src=../js/line.js></script>
   <script>
@@ -120,13 +141,16 @@ function counter2(){
 
     //trigger these functions on page scroll
     new scroll('div1','75%',repeatImage)
-    new scroll('div2', '75%', scatter,repeatImage);
-	  new scroll('div2', '75%', counter,repeatImage);
+    new scroll('div2', '75%', scatter);
+	  new scroll('div2', '75%', counter);
     new scroll('div3', '50%', drawLine);
 	  new scroll('div3', '75%', counter2);
     new scroll('div3', '75%', counter3);
+    new scroll('div3', '75%', counter4);
    
 
    </script>
+
+   <div class="footer2" ><p> original data was scraped with <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a> and cleaned with <a href="http://pandas.pydata.org/pandas-docs/version/0.15/tutorials.html">Pandas</a>.</p></div>
 
 </body>

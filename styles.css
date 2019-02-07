@@ -19,7 +19,6 @@
   html,
   body{
      height: 100%;
-     padding: 0;
      scroll-behavior: smooth;
      background: #f7f5f2;
      color: #666;
@@ -76,6 +75,15 @@
     height: 500px;
     margin:0;
   }
+.footer2 {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f7f5f2;
+  color: #808080;
+  text-align: center;
+}
 
 
 
