@@ -44,41 +44,7 @@
      
   </div>
 </header>
-<div class='col1'>
-<h2>2012 Great Britain collision overview</h2></div>
-<div class='container col'><h3>In total, there were an observed <strong>179,715</strong> collisions, <strong>241,954</strong> casualities, involving <strong>328,066</strong> vehicles.</h3></div>
-<div id='map'></div>
-<h2>number of collisions by day of the year</h2>
-<div id="chart" class="clearfix"> </div>
-<div id='donuts'><h2>cities vrs. towns & countryside</h2></div>
-<p class="text-center">% of accidents in cities</p>
-<div id='moredonuts'></div>
-<p class="text-center">% of <font color=#00FF00 > minor, <font color= #ffc600> serious, <font color=#808080> and <font color=#ff6666> deadly <font color=#808080>accidents in cities.</p>
-<div id='nextdiv'><h2></h2></div>
-
-<script src="../js/map.js"></script>
-<script src="../js/calendar.js"></script>
-<script src="../js/donuts.js"></script>
-
-<script>  
-  function scroll(n, offset, func1, func2){
-      return new Waypoint({
-        element: document.getElementById(n),
-        handler: function(direction) {
-           direction == 'down' ? func1() : func2();
-           this.destroy();
-        },
-        //start 75% from the top of the div
-        offset: offset
-      });
-    };
-    //trigger these functions on page scroll
-    new scroll('chart', '75%', createCalendar); //unidirectional triggers
-    new scroll('moredonuts', '75%', createDonut);
-    new scroll('nextdiv', '75%', createMoreDonuts);
-    
- </script>
- <p class="w3-center"> original data may be found via <a href="https://www.kaggle.com/daveianhickey/2000-16-traffic-flow-england-scotland-wales"> kaggle</a> or via the <a href="https://data.gov.uk/">uk open data site</a>
-
+<h2>Atlast of Languages</h2>
+<div id='languagemap'></div>
+<script src="../js/maplanguages.js"></script>
 </body>
-</html>
