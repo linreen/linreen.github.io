@@ -1,6 +1,4 @@
- #map { position:relative; top:100; bottom:0; width:50%; height:50%;
-          padding-left: auto;}
-        <style>
+
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
   *{
     margin:0;
@@ -23,10 +21,7 @@
     padding-left: 45px;
     font-weight: 300;
   }
-  h1{
-    line-height: 1.25;
-    font-weight: 400;
-  }
+
   a:hover {
   color: lightgrey;
   text-shadow: lightgrey;
@@ -48,14 +43,15 @@
   }
   .container {
     height: 100%;
-    max-width: 440px;
+    max-width: 40%;
     width: 100%;
     margin: 0;
     padding: 0;
     position: absolute;
     height: 100%;
     line-height: 1.5;
-    left: 700px;
+    left: 60%;
+    right:25%;
   }
 
       #chart{
@@ -140,3 +136,6 @@
     #moredonuts{
       display:inline;
     }
+     #map { position:relative; top:100; bottom:0; width:50%; height:50%;
+          padding-left: auto;}
+ 

@@ -10,7 +10,7 @@ var map = new mapboxgl.Map({
 $(document).ready(function() {
     $.ajax({
         type: "GET",
-        url: 'https://raw.githubusercontent.com/linreen/linreen.github.io/master/data/lonlat_2012.csv',
+        url: 'https://raw.githubusercontent.com/linreen/linreen.github.io/master/data/lonlat_2012_V2.csv',
         dataType: "text",
         success: function(csvData) {makeGeoJSON(csvData);}
      });

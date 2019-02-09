@@ -19,11 +19,6 @@
     padding-top: 45px;
     font-weight: 300;
   }
-  h1{
-    line-height: 1.25;
-    font-weight: 400;
-    padding-top: 45px;
-  }
   a:hover {
   color: grey;
   text-shadow: lightgrey;
@@ -38,3 +33,4 @@
   strong{
     font-weight: 600;
   }
+  
