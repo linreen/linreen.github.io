@@ -24,9 +24,9 @@
         .enter().append("svg")
         .attr("width", width)
         .attr("height", height)
-        .attr("preserveAspectRatio", "xMidYMid meet")
-        .attr("viewBox", "0 0 " + width + " " + height);
         .attr("class", "RdYlGn")
+        .attr("preserveAspectRatio", "xMidYMid meet")
+        .attr("viewBox", "0 0 " + width + " " + height)
       .append("g")
       .attr("transform", "translate(" + width / 12 + "," + 0 + ")");
 
@@ -38,6 +38,8 @@
         .attr("class", "day")
         .attr("width", cellSize)
         .attr("height", cellSize)
+        .attr("preserveAspectRatio", "xMidYMid meet")
+        .attr("viewBox", "0 0 " + cellSize + " " + cellSize)
         .attr("x", function(d) {
           var month_padding = 1.2 * cellSize*7 * ((month(d)-1) % (no_months_in_a_row));
           return day(d) * cellSize + month_padding; 
