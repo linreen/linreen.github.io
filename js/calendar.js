@@ -24,6 +24,8 @@
         .enter().append("svg")
         .attr("width", width)
         .attr("height", height)
+        .attr("preserveAspectRatio", "xMidYMid meet")
+        .attr("viewBox", "0 0 " + width + " " + height);
         .attr("class", "RdYlGn")
       .append("g")
       .attr("transform", "translate(" + width / 12 + "," + 0 + ")");
