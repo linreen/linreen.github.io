@@ -47,7 +47,7 @@
 
       #chart{
         width: 80%;
-        align-self: center;
+        display: inline-block;
       }
       .background {
         fill: #eee;
@@ -127,7 +127,7 @@
     #moredonuts{
       display:inline;
     }
-    #map { position:relative; bottom:0; width:100%; height:50%;
+    #map {bottom:0; width:100%; height:50%;
          }
     #languagemap { position:relative; bottom:0; width:100%; height:100%;
       }
