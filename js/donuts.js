@@ -1,5 +1,5 @@
 function createDonut(){
-var duration = 2000,
+var duration = 3000,
     transition = 200,
     percent = 68,
     width = window.innerWidth - 20,
@@ -54,7 +54,7 @@ var timeout = setTimeout(function () {
             return arc(i(t));
         };
     });
-}, 1000);
+}, 3000);
 
 function calcPercent(percent) {
     return [percent, 100 - percent];
@@ -62,7 +62,7 @@ function calcPercent(percent) {
 }
 
 function createMoreDonuts(){
-    var duration = 2000,
+    var duration = 3000,
     transition = 200,
     percent = 69,
     percent2 = 63,
@@ -164,7 +164,7 @@ var timeout = setTimeout(function () {
             return arc(i(t));
         };
     });
-}, 1000);
+}, 3000);
 
 var timeout2 = setTimeout(function () {
     clearTimeout(timeout2);
@@ -178,7 +178,7 @@ var timeout2 = setTimeout(function () {
             return arc(i(t));
         };
     });
-}, 1000);
+}, 3000);
 
 var timeout3 = setTimeout(function () {
     clearTimeout(timeout3);
@@ -192,7 +192,7 @@ var timeout3 = setTimeout(function () {
             return arc(i(t));
         };
     });
-}, 1000);
+}, 3000);
 function calcPercent(percent) {
     return [percent, 100 - percent];
 };

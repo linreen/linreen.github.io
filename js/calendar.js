@@ -1,7 +1,7 @@
     function createCalendar(){
     var width = window.innerWidth - 20,
         height = window.innerHeight-20,
-        cellSize = 20; // cell size
+        cellSize = 22; // cell size
 
     var no_months_in_a_row = Math.floor(width / (cellSize * 7 + 50));
     var shift_up = cellSize * 3;
@@ -36,6 +36,8 @@
         })
       .enter().append("rect")
         .attr("class", "day")
+        .attr("preserveAspectRatio", "xMidYMid meet")
+        .attr("viewBox", "0 0 " + cellSize + " " + cellSize)
         .attr("width", cellSize)
         .attr("height", cellSize)
         .attr("x", function(d) {
@@ -47,8 +49,6 @@
           var row_level = Math.ceil(month(d) / (no_months_in_a_row));
           return (week_diff*cellSize) + row_level*cellSize*8 - cellSize/2 - shift_up;
         })
-        .attr("preserveAspectRatio", "xMidYMid meet")
-        .attr("viewBox", "0 0 " + cellSize + " " + cellSize)
         .datum(format);
 
     var month_titles = svg.selectAll(".month-title")  // Jan, Feb, Mar and the whatnot

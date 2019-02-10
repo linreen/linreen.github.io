@@ -44,7 +44,92 @@
      
   </div>
 </header>
-<h2>Atlast of Languages</h2>
-<div id='languagemap'></div>
-<script src="../js/maplanguages.js"></script>
+<h2>the use of words</h2>
+
+<div id='newgraph'></div>
+
+
+<script>
+
+var margin = {top: 20, right: 100, bottom: 20, left: 100},
+    width = 500 - margin.left - margin.right,
+    height = 1500 - margin.top - margin.bottom;
+
+var formatPercent = d3.format(".4s");
+
+var x = d3.scale.linear()
+    .range([0, width]);
+
+var y = d3.scale.ordinal()
+    .rangeRoundBands([height, 0], .3, .3);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom")
+    .tickFormat(formatPercent);
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .tickSize(0)
+    .orient("left");
+
+var svg = d3.select("#newgraph").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.csv("https://raw.githubusercontent.com/linreen/linreen.github.io/master/data/unigram_freq_V3.csv", function(error, data) {
+  
+  data.forEach(function(d) {
+    d.count = +d.count;
+  });
+
+  x.domain([0, d3.max(data, function(d) { return d.count; })]);
+  y.domain(data.map(function(d) { return d.word; }));
+
+
+  var bar = svg.selectAll(".bar")
+      .data(data)
+    .enter().append("g")
+      .attr("class", "bar");
+
+  bar.append("rect")
+      .attr("y", function(d) { return y(d.word); })
+      .attr("height", y.rangeBand())
+      .attr("width", 0)
+      .style("fill"," #B0E0E6");
+
+  bar.append("text")
+      .attr("x", 5)
+      .attr("y", function(d) { return y(d.word) + y.rangeBand()/2 + 3; })
+      .text(0);
+
+  bar.selectAll("rect").transition().ease("quad-out").duration(2000).delay(0).attr("width", function(d) { return x(d.count); });
+  
+  bar.selectAll("text").transition().ease("quad-out").duration(2000).delay(0)
+    .attr("x", function(d) { return x(d.count) + 3; })
+    .tween("text", function(d) {
+      var i = d3.interpolate(0, d.count);
+      return function(t) {
+        d3.select(this).text(formatPercent(i(t)));
+      };
+    });
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .selectAll("text")
+      .style("font-weight","bold");
+
+  d3.select(self.frameElement).style("height", (height + margin.top + margin.bottom) + "px");
+
+});
+
+</script>
 </body>
