@@ -1,6 +1,6 @@
     function createCalendar(){
-    var width = 960,
-        height = 750,
+    var width = window.innerWidth - 20,
+        height = window.innerHeight+100,
         cellSize = 25; // cell size
 
     var no_months_in_a_row = Math.floor(width / (cellSize * 7 + 50));
@@ -21,11 +21,12 @@
 
     var svg = d3.select("#chart").selectAll("svg")
         .data(d3.range(2012, 2013))
-      .enter().append("svg")
+        .enter().append("svg")
         .attr("width", width)
         .attr("height", height)
         .attr("class", "RdYlGn")
       .append("g")
+      .attr("transform", "translate(" + width / 12 + "," + 0 + ")");
 
     var rect = svg.selectAll(".day")
         .data(function(d) { 
