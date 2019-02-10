@@ -7,5 +7,5 @@ function detectmob() {
 }
 
 if (detectmob()){
-top.location.href="mobile.html";
+top.location.href="../mobile.html";
 }
