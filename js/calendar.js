@@ -1,7 +1,7 @@
     function createCalendar(){
     var width = window.innerWidth - 20,
-        height = window.innerHeight-20,
-        cellSize = 22; // cell size
+        height = window.innerWidth/1.5,
+        cellSize = window.innerWidth/42; // cell size
 
     var no_months_in_a_row = Math.floor(width / (cellSize * 7 + 50));
     var shift_up = cellSize * 3;
