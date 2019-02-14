@@ -25,8 +25,6 @@
         .attr("width", width)
         .attr("height", height)
         .attr("class", "RdYlGn")
-        .attr("preserveAspectRatio", "xMidYMid meet")
-        .attr("viewBox", "0 0 " + width + " " + height)
       .append("g")
       .attr("transform", "translate(" + width / 12 + "," + 0 + ")");
 
