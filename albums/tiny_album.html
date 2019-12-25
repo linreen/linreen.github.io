@@ -1,125 +1,66 @@
 <html>
-<head>
-<link href="https://fonts.googleapis.com/css?family=Dynalight&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<title>home</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.parallax {
-  /* The image used */
-  background-image: url("../gallery_images/tiny/DSC05842.JPG");
-
-  /* Set a specific height */
-  min-height: 100%; 
-
-  /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index:0;
-  background-position: absolute;
-}
-#header{
-  position: absolute;
-  z-index: 0;
-  top: 10%;
-  left: 20%;
-  font-family: 'Dynalight';
-  font-size:300%;
-  opacity: 0.75;
-  color:white;
-}
-  #navbar {
-    font-family: 'Open Sans', sans-serif;
-  overflow: hidden;
-  background-color: #333;
-  opacity:0.75;
-}
-
-#navbar a {
-  font-family: 'Open Sans', sans-serif;
-  float: right;
-  display: block;
-  color: #f2f2f2;
-  text-align: right;
-  padding: 1% 1%;
-  text-decoration: none;
-  font-size: 100%;
-}
-
-#navbar a:hover {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #ddd;
-  color: black;
-}
-
-}
-</style>
-</head>
+<link rel="stylesheet" href="../w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="../styles/styles.css">
 <body>
-<div id="navbar">
-  <a href="../views/viz.html">viz</a>
-  <a href="../views/about_me.html">about</a>
-  <a href="../views/writing.html">writing</a>
-  <a href="../index.html">gallery</a>
+  
+<!-- Header -->
+<header class="w3-display-container w3-content w3-center w3-animate-opacity" style="max-width:100%">
+  <img class="w3-image" src="../images/darkgrey.png" alt="Me" width="100%" height="300">
+  <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
+    <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">L. REN</h1>
+    <h5 class="w3-hide-large" style="white-space:nowrap">L. REN</h5>
+  </div>
+  
+   <!-- Navbar (placed at the bottom of the header image) -->
+  <div class="w3-bar w3-light-grey w3-round w3-display-bottommiddle w3-hide-small" style="bottom:-16px">
+    <a href="../index.html" class="w3-bar-item w3-button">gallery</a>
+    <a href="../views/writing.html" class="w3-bar-item w3-button">writing</a>
+    <a href="../views/about_me.html" class="w3-bar-item w3-button">about</a>
+   <a href="../views/viz.html" class="w3-bar-item w3-button">viz</a>
+
+  </div>
+</header>
+  
+<!-- Page content -->
+<div class="w3-white w3-padding-large w3-padding-32 w3-margin-top w3-animate-opacity w3-content w3-display-container" style="max-width:1500px">
+<h1 align='center'></h1>
+
+<div class="w3-content w3-padding-large w3-margin-top  w3-animate-opacity>" id="penetanguishene_album">
+  <div class="w3-display-container">
+  
+  <img src="../gallery_images/tiny/DSC05650.JPG" title="Outlook" class="w3-image w3-margin-top w3-hover-opacity " width="1000" height="500">  
+  
+  <img src="../gallery_images/tiny/DSC05661.JPG" title="Planter" class="w3-image w3-margin-top w3-hover-opacity " width="1000" height="500"> 
+
+  <img src="../gallery_images/tiny/DSC05663.JPG" title="Building" class="w3-image w3-margin-top w3-hover-opacity " width="1000" height="500"> 
+
+  <img src="../gallery_images/tiny/DSC05730.JPG" title="Villa D'est" class="w3-image w3-margin-top w3-hover-opacity " width="1000" height="500">
+
+  <img src="../gallery_images/tiny/DSC05790.JPG" title="Trees" class="w3-image w3-margin-top w3-hover-opacity " width="1000" height="500"> 
+
+  <img src="../gallery_images/tiny/DSC05817.JPG" title="Balcony" class="w3-image w3-margin-top w3-hover-opacity " width="1000" height="500"> 
+
+  <img src="../gallery_images/tiny/DSC05822.JPG" title="Fountain Path" class="w3-image w3-margin-top w3-hover-opacity " width="1000" height="500"> 
+
+  <img src="../gallery_images/tiny/DSC05842.JPG" title="Fountain Path" class="w3-image w3-margin-top w3-hover-opacity " width="1000" height="500"> 
+  
+  <img src="../gallery_images/tiny/DSC05851.JPG" title="Fountain" class="w3-image w3-margin-top w3-hover-opacity " width="1000" height="500"> 
+
+  <img src="../gallery_images/tiny/DSC05904.JPG" title="Alley" class="w3-image w3-margin-top w3-hover-opacity " width="1000" height="500"> 
+
+  
 
 </div>
+</div>
+<!-- Footer -->
+<footer class="w3-display-container w3-content w3-center">
+  <a href="../index.html"><button class="w3-button w3-black w3-padding-large w3-margin-bottom">back to home</button></a>
+</footer>
 
-<h1 id="header">Penetanguishene, Ontario</h1>
-
-<div class="parallax" style="background-image: url(../gallery_images/tiny/DSC05817.JPG);"></div>
-
-<div style="height:2%;background-color:white;font-size:2%;opacity: 0.5; "></div>
-<div class="parallax" style="background-image: url(../gallery_images/tiny/DSC05842.JPG);"></div>
-
-<div style="height:2%;background-color:white;font-size:2%;opacity: 0.5;"></div>
-
-<div class="parallax" style="background-image: url(../gallery_images/tiny/DSC05849.JPG);"></div>
-
-<div style="height:2%;background-color:white;font-size:2%;opacity: 0.5; "></div>
-
-<div class="parallax" style="background-image: url(../gallery_images/tiny/DSC05851.JPG);"></div>
-
-<div style="height:2%;background-color:white;font-size:2%;opacity: 0.5; "></div>
-
-<div class="parallax" style="background-image: url(../gallery_images/tiny/DSC05955.JPG);"></div>
-
-<div style="height:2%;background-color:white;font-size:2%;opacity: 0.5; "></div>
-
-<div class="parallax" style="background-image: url(../gallery_images/tiny/DSC05956.JPG);"></div>
-
-<div style="height:2%;background-color:white;font-size:2%;opacity: 0.5; "></div>
-
-<div class="parallax" style="background-image: url(../gallery_images/tiny/DSC05650.JPG);"></div>
-
-<div style="height:2%;background-color:white;font-size:2%;opacity: 0.5; "></div>
-
-<div class="parallax" style="background-image: url(../gallery_images/tiny/DSC05663.JPG);"></div>
-
-<div style="height:2%;background-color:white;font-size:2%;opacity: 0.5; "></div>
-
-<div class="parallax" style="background-image: url(../gallery_images/tiny/DSC05779.JPG);"></div>
-
-<div style="height:2%;background-color:white;font-size:2%;opacity: 0.5; "></div>
-
-<div class="parallax" style="background-image: url(../gallery_images/tiny/DSC05790.JPG);"></div>
-
-<div style="height:2%;background-color:white;font-size:2%;opacity: 0.5; "></div>
-
-<script>
-window.onscroll = function() {myFunction()};
-
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-</script>
-
+<!-- End page content -->
 </body>
 </html>
