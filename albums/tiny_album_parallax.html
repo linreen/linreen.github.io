@@ -1,0 +1,126 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Dynalight&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+.parallax {
+  /* The image used */
+  background-image: url("../gallery_images/tiny/DSC05842.JPG");
+
+  /* Set a specific height */
+  min-height: 100%; 
+
+  /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index:0;
+  background-position: absolute;
+}
+#header{
+  position: absolute;
+  z-index: 0;
+  top: 10%;
+  left: 20%;
+  font-family: 'Dynalight';
+  font-size:300%;
+  opacity: 0.75;
+  color:white;
+}
+  #navbar {
+    font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+  background-color: #333;
+  opacity:0.75;
+}
+
+#navbar a {
+  font-family: 'Open Sans', sans-serif;
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: right;
+  padding: 1% 1%;
+  text-decoration: none;
+  font-size: 90%;
+}
+
+#navbar a:hover {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ddd;
+  color: black;
+}
+
+}
+</style>
+</head>
+<body>
+<div id="navbar">
+  <a href="../views/viz.html">viz</a>
+  <a href="../views/about_me.html">about</a>
+  <a href="../views/writing.html">writing</a>
+  <a href="../index.html">gallery</a>
+
+</div>
+
+<h1 id="header">Penetanguishene, Ontario</h1>
+
+<div class="parallax" style="background-image: url(../gallery_images/tiny/DSC05817.JPG);"></div>
+
+<div style="height:2%;background-color:white;font-size:2%;opacity: 0.5; "></div>
+<div class="parallax" style="background-image: url(../gallery_images/tiny/DSC05842.JPG);"></div>
+
+<div style="height:2%;background-color:white;font-size:2%;opacity: 0.5;"></div>
+
+<div class="parallax" style="background-image: url(../gallery_images/tiny/DSC05849.JPG);"></div>
+
+<div style="height:2%;background-color:white;font-size:2%;opacity: 0.5; "></div>
+
+<div class="parallax" style="background-image: url(../gallery_images/tiny/DSC05851.JPG);"></div>
+
+<div style="height:2%;background-color:white;font-size:2%;opacity: 0.5; "></div>
+
+<div class="parallax" style="background-image: url(../gallery_images/tiny/DSC05955.JPG);"></div>
+
+<div style="height:2%;background-color:white;font-size:2%;opacity: 0.5; "></div>
+
+<div class="parallax" style="background-image: url(../gallery_images/tiny/DSC05956.JPG);"></div>
+
+<div style="height:2%;background-color:white;font-size:2%;opacity: 0.5; "></div>
+
+<div class="parallax" style="background-image: url(../gallery_images/tiny/DSC05650.JPG);"></div>
+
+<div style="height:2%;background-color:white;font-size:2%;opacity: 0.5; "></div>
+
+<div class="parallax" style="background-image: url(../gallery_images/tiny/DSC05663.JPG);"></div>
+
+<div style="height:2%;background-color:white;font-size:2%;opacity: 0.5; "></div>
+
+<div class="parallax" style="background-image: url(../gallery_images/tiny/DSC05779.JPG);"></div>
+
+<div style="height:2%;background-color:white;font-size:2%;opacity: 0.5; "></div>
+
+<div class="parallax" style="background-image: url(../gallery_images/tiny/DSC05790.JPG);"></div>
+
+<div style="height:2%;background-color:white;font-size:2%;opacity: 0.5; "></div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>
